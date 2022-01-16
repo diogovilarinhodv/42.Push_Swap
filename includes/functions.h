@@ -3,6 +3,8 @@
 
 // Libft
 int		ft_atoi(const char *nptr);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlen(const char *s);
 
 // Utils
 void	inicialize(t_stacks *stack, int argc, char **argv);
@@ -32,6 +34,7 @@ void	cost_last_element(t_stacks *stack, int a, int b);
 void	cost_set(t_stacks *stack, int b);
 int		is_sorted_low_to_high(int *stack, int qty);
 int     is_sorted_high_to_low(int *stack, int qty);
+int		element_pos_max(int	*stack, int qty);
 
 // Operations
 int		sa(t_stacks *stack);

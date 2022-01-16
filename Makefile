@@ -87,11 +87,14 @@ SRC_ALGORITHM_UTILS_FILES	=	src/algorithm_utils/is_sorted_low_to_high.c					\
 								src/algorithm_utils/advanced_operation_stack_a.c			\
 								src/algorithm_utils/cost_element.c							\
 								src/algorithm_utils/cost_last_element.c						\
-								src/algorithm_utils/cost_set.c	
+								src/algorithm_utils/cost_set.c								\
+								src/algorithm_utils/element_pos_max.c
 
 
 # LIBFT files
-SRC_LIBFT_FILES				=	libft/ft_atoi.c
+SRC_LIBFT_FILES				=	libft/ft_atoi.c												\
+								libft/ft_strlen.c											\
+								libft/ft_strncmp.c	
 
 
 # Name of executable file
