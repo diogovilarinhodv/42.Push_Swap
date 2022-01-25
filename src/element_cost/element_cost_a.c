@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 18:10:27 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:11:46 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:33:21 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	element_cost_a(t_stacks *stack, int a, int b)
 {
-	if (*(stack->a.value + a - 1) < *(stack->b.value + b) && *(stack->a.value + a) > *(stack->b.value + b))
+	if (*(stack->a.value + a - 1) < *(stack->b.value + b)
+		&& *(stack->a.value + a) > *(stack->b.value + b))
 	{
 		if (stack->a.qty / 2 > a)
 		{

@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:04:14 by dpestana          #+#    #+#             */
-/*   Updated: 2021/12/30 18:27:42 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:26:38 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@
 void	element_climb(int **stack, int qty)
 {
 	int	cnt;
-	int tmp;
+	int	tmp;
 
 	cnt = 0;
 	tmp = *(*stack + cnt);

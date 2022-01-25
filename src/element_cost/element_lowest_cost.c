@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 14:17:01 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:13:14 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:32:35 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	element_lowest_cost(t_stacks *stack)
 			while (a < stack->a.qty)
 			{
 				if (element_cost_a(stack, a, b) == 1)
-					break;
+					break ;
 				a++;
 			}
 		}

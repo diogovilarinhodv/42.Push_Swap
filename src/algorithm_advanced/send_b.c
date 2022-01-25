@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 19:39:47 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/24 19:50:57 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:35:35 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static int	get_third(t_stacks *stack)
 
 static int	get_second(t_stacks *stack)
 {
-	int first;
-	int third;
+	int	first;
+	int	third;
 
 	first = get_first(stack);
 	third = get_third(stack);
@@ -52,14 +52,20 @@ static int	get_second(t_stacks *stack)
 	return (*(stack->a.value + 2));
 }
 
-void send_b(t_stacks *stack)
+void	send_b(t_stacks *stack)
 {
-	int third;
+	int	first;
+	int	second;
+	int	third;
+	int	third_biggest;
 
-	third = third_biggest_element(stack, get_first(stack), get_second(stack), get_third(stack));
+	first = get_first(stack);
+	second = get_second(stack);
+	third = get_third(stack);
+	third_biggest = third_biggest_element(stack, first, second, third);
 	while (stack->a.qty > 3)
 	{
-		if (third > *stack->a.value)
+		if (third_biggest > *stack->a.value)
 		{
 			pb(stack);
 			sort_stack_b(stack);

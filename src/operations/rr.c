@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:22:30 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:56:34 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 22:26:06 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int	rr(t_stacks *stack)
 	rb(stack);
 	stack->output = 1;
 	write(1, "rr\n", 3);
-	//printer_tester(stack);
 	return (0);
 }

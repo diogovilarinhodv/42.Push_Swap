@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:53:37 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:56:34 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 22:25:52 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int	pb(t_stacks *stack)
 	element_remove(stack, &stack->a.value, &(stack->a.qty));
 	if (stack->output == 1)
 		write(1, "pb\n", 3);
-	//printer_tester(stack);
 	return (0);
 }

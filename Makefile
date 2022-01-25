@@ -25,7 +25,9 @@ LIB_FOLDER					=	lib
 
 # Files
 LIB_FILE					=	push_swap.a
-HEADER_FILES				=	src/push_swap.h
+HEADER_FILES				=	includes/push_swap.h											\
+								includes/functions.h											\
+								includes/structs.h
 OBJ_FILES					=	${SRC_FILES:.c=.o}
 
 #################################################################################################
@@ -45,8 +47,7 @@ SRC_FILES						=	$(ALGORITHM)												\
 									$(STACK_VERIFY)												\
 									$(UTILS)													\
 									$(LIBFT)													\
-									$(EXECUTABLE_FILE)											\
-									printer_tester.c
+									$(EXECUTABLE_FILE)
 
 # Algorithm
 ALGORITHM						=	src/algorithm/sort.c										\
@@ -55,12 +56,11 @@ ALGORITHM						=	src/algorithm/sort.c										\
 									src/algorithm/sort_advanced.c
 
 # Algorithm Advanced
-ALGORITHM_ADVANCED				=	src/algorithm_advanced/send_to_stack_b.c					\
-									src/algorithm_advanced/sort_stack_b.c						\
-									src/algorithm_advanced/min_to_top_stack_a.c					\
+ALGORITHM_ADVANCED				=	src/algorithm_advanced/min_to_top_stack_a.c					\
 									src/algorithm_advanced/min_to_top_stack_b.c					\
 									src/algorithm_advanced/min_to_top_stacks.c					\
 									src/algorithm_advanced/send_b.c								\
+									src/algorithm_advanced/sort_stack_b.c						\
 									src/algorithm_advanced/third_biggest_element.c
 
 # Algorithm Low

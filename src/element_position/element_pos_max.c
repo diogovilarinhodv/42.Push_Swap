@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 10:30:22 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/20 10:17:00 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:25:47 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	element_pos_max(int	*stack, int qty)
 {
 	int	inc;
-	int max_value;
-	int max_idx;
+	int	max_value;
+	int	max_idx;
 
 	inc = 0;
 	max_idx = 0;
@@ -30,5 +30,5 @@ int	element_pos_max(int	*stack, int qty)
 		}
 		inc++;
 	}
-	return(max_idx); 
+	return (max_idx);
 }

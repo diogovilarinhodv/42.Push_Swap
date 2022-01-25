@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 17:23:39 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/20 10:16:47 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:26:00 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	element_pos_min(int	*stack, int qty)
 {
 	int	inc;
 	int	min_value;
-	int min_idx;
+	int	min_idx;
 
 	inc = 0;
 	min_idx = 0;
@@ -30,5 +30,5 @@ int	element_pos_min(int	*stack, int qty)
 		}
 		inc++;
 	}
-	return(min_idx); 
+	return (min_idx);
 }

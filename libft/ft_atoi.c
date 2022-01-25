@@ -18,9 +18,11 @@ static int	isInvalid(int cnt, const char *nptr)
 
 static int	isSpecialChar(int cnt, const char *nptr, int foundNum)
 {
-	if ((*(nptr + cnt) == '+' || *(nptr + cnt) == '-' || (9 <= *(nptr + cnt)
-			&& *(nptr + cnt) <= 13) || *(nptr + cnt) == 32)
-			&& foundNum == 0)
+	char	ch;
+
+	ch = *(nptr + cnt);
+	if ((ch == '+' || ch == '-' || (9 <= ch && ch <= 13) || ch == 32)
+		&& foundNum == 0)
 		return (1);
 	return (0);
 }

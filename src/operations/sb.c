@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:46:16 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:56:34 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 22:25:35 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ int	sb(t_stacks *stack)
 	element_swap(stack->b.value, stack->b.value + 1);
 	if (stack->output == 1)
 		write(1, "sb\n", 3);
-	//printer_tester(stack);
 	return (0);
 }

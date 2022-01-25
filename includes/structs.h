@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 15:12:28 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:11:00 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 22:39:17 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_cost
 	int	temp_a;
 	int	temp_b;
 	int	a;
-	int b;
+	int	b;
 	int	temp_reverse_a;
 	int	temp_reverse_b;
 	int	reverse_a;

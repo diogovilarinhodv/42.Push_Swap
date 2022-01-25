@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:38:48 by dpestana          #+#    #+#             */
-/*   Updated: 2021/12/30 18:27:46 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:26:22 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@
 void	element_fall(int **stack, int qty)
 {
 	int	cnt;
-	int tmp;
+	int	tmp;
 
 	cnt = (qty - 1);
 	tmp = *(*stack + cnt);

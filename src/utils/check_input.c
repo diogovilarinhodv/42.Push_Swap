@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 17:00:57 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/15 10:17:57 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:22:57 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ static int	is_number(char *str)
 		inc++;
 	while ('0' <= *(str + inc) && *(str + inc) <= '9')
 		inc++;
-	if (*(str + inc) == '\0' && '0' <= *(str + inc - 1) && *(str + inc - 1) <= '9')
+	if (*(str + inc) == '\0'
+		&& '0' <= *(str + inc - 1) && *(str + inc - 1) <= '9')
 		return (1);
 	else
 		return (0);
@@ -57,7 +58,6 @@ static int	is_integer(char *str)
 
 	str_len = ft_strlen(str);
 	int_len = 10;
-	
 	if (*str == '-' && str_len < int_len + 1)
 		return (1);
 	if (str_len < int_len)
@@ -96,7 +96,7 @@ void	check_input(int argc, char **argv)
 		error_args();
 	while (inc < argc)
 	{
- 		if (is_number(*(argv + inc)) == 0)
+		if (is_number(*(argv + inc)) == 0)
 			program_over(NULL, 1);
 		if (is_integer(*(argv + inc)) == 0)
 			program_over(NULL, 1);

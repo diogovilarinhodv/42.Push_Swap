@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 11:28:34 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:12:03 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:32:50 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	element_cost_pos_min(t_stacks *stack, int b)
 {
 	int	pos_min;
-	
+
 	pos_min = element_pos_min(stack->a.value, stack->a.qty);
 	if (*(stack->a.value + pos_min) > *(stack->b.value + b))
 	{

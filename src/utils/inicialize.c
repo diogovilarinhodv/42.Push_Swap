@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:21:22 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/23 12:51:17 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:56:40 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	inicialize(t_stacks *stack, int argc, char **argv)
 	stack->a.value = NULL;
 	stack->a.qty = 0;
 	stack->b.value = NULL;
-	stack->b.qty= 0;
+	stack->b.qty = 0;
 	stack->sorted_a.value = NULL;
 	stack->sorted_a.qty = 0;
 	stack->median = 0;

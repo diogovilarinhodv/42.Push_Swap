@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 18:11:03 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:11:25 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:31:49 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	element_set_costs(t_stacks *stack, int b)
 {
-	if (b == 0 || stack->cost.temp_a + stack->cost.temp_b < stack->cost.a + stack->cost.b)
+	if (b == 0
+		|| stack->cost.temp_a + stack->cost.temp_b < stack->cost.a + stack->cost.b)
 	{
 		stack->cost.a = stack->cost.temp_a;
 		stack->cost.b = stack->cost.temp_b;

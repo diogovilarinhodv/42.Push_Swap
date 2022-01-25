@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 10:19:25 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/19 10:20:10 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:33:40 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	is_reverse_rotate(int *stack)
 {
-	int first;
+	int	first;
 	int	second;
 	int	third;
 

@@ -8,14 +8,12 @@ void	sort_medium(t_stacks *stack);
 void	sort_advanced(t_stacks *stack);
 
 // Advanced algorithm
-void	executes_rra_or_ra(t_stacks *stack);
-void	send_to_stack_b(t_stacks *stack);
-void	sort_stack_b(t_stacks *stack);
 int		min_to_top_stacks(t_stacks *stack);
 void	min_to_top_stack_a(t_stacks *stack, int inc);
 void	min_to_top_stack_b(t_stacks *stack, int inc);
-void    send_b(t_stacks *stack);
-int     third_biggest_element(t_stacks *stack, int first, int second, int third);
+void	send_b(t_stacks *stack);
+void	sort_stack_b(t_stacks *stack);
+int		third_biggest_element(t_stacks *stack, int f, int s, int t);
 
 // Low algorithm
 int		is_reverse_rotate(int *stack);
@@ -23,7 +21,7 @@ int		is_rotate(int *stack);
 
 // Element costs
 int		element_cost_a(t_stacks *stack, int a, int b);
-void    element_cost_b(t_stacks *stack, int b);
+void	element_cost_b(t_stacks *stack, int b);
 int		element_cost_pos_first(t_stacks *stack, int a, int b);
 int		element_cost_pos_min(t_stacks *stack, int b);
 int		element_cost_pos_max(t_stacks *stack, int b);
@@ -78,9 +76,5 @@ void	program_over(t_stacks *stack, int status);
 int		ft_atoi(const char *nptr);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
-
-// Tester
-void	printer_tester(t_stacks *stack);
-void	printer_tester_edges(t_stacks *stack);
 
 #endif

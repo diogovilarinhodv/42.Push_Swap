@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_sorted.c                                        :+:      :+:    :+:   */
+/*   is_sorted_low_to_high.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 14:45:26 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/09 02:34:10 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:23:53 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	is_sorted_low_to_high(int *stack, int qty)
 		if (*(stack + inc - 1) < *(stack + inc))
 			inc++;
 		else
-			break;
+			break ;
 	}
 	if (inc == qty)
 		return (1);

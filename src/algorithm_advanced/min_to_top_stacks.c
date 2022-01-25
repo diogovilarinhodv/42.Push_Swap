@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 08:20:23 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 15:51:16 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:44:12 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	min_to_top_stacks(t_stacks *stack)
 {
 	int	inc;
-	int inc_of_rotates;
+	int	inc_of_rotates;
 
 	inc = 0;
 	inc_of_rotates = 0;

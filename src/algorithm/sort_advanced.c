@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 03:54:38 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 16:06:33 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:43:47 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_advanced(t_stacks *stack)
 {
 	int	inc;
-	
+
 	send_b(stack);
 	sort_low(stack);
 	while (stack->b.qty > 0)

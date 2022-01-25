@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:20:58 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/02 19:39:36 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:24:17 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@
 
 void	stack_refill(int *new_stack, int *old_stack, int qty)
 {
-    int inc;
+	int	inc;
 
-    inc = 0;
+	inc = 0;
 	while (inc < qty)
 	{
 		*(new_stack + inc) = *(old_stack + inc);

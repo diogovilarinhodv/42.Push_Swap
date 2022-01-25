@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:56:34 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 16:05:29 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/25 22:26:20 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@
 
 void	sort(t_stacks *stack)
 {
-	//printer_tester_edges(stack);
 	if (is_sorted_low_to_high(stack->a.value, stack->a.qty) == 0 || stack->b.qty > 0)
 	{
 		if (stack->a.qty <= 3)
@@ -46,5 +45,4 @@ void	sort(t_stacks *stack)
 		else
 			sort_advanced(stack);
 	}
-	//printer_tester_edges(stack);
 }
