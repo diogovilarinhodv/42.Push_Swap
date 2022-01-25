@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cost_last_element.c                                :+:      :+:    :+:   */
+/*   element_cost_pos_first.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 18:11:26 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/11 18:21:23 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/25 11:27:01 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/25 15:12:45 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	cost_last_element(t_stacks *stack, int a, int b)
+int	element_cost_pos_first(t_stacks *stack, int a, int b)
 {
-	if (a == stack->a.qty - 1)
+	if (*(stack->a.value + a) > *(stack->b.value + b) && *(stack->a.value + stack->a.qty - 1) < *(stack->b.value + b))
 	{
-		stack->cost.b = b;
-		stack->cost.a = 1;
+		stack->cost.temp_a = 0;
+		stack->cost.temp_reverse_a = 0;
+		return (1);
 	}
+	return (0);
 }

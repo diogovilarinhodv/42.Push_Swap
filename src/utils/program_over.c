@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 12:02:44 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/16 09:47:36 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/19 08:56:18 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ void	program_over(t_stacks *stack, int status)
 			free(stack->a.value);
 		if (stack->b.value != NULL)
 			free(stack->b.value);
-		if (stack->sorted.value != NULL)
-			free(stack->sorted.value);
 	}
 	if (status == 1)
 		write(1, "Error\n", 6);

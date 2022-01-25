@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_median.c                                     :+:      :+:    :+:   */
+/*   element_pos_max.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/23 10:18:23 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/23 10:18:42 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/16 10:30:22 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/20 10:17:00 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	stack_median(int *stack, int qty, int *set_median)
+int	element_pos_max(int	*stack, int qty)
 {
-	*set_median = *(stack + (qty / 2));
-	if (qty % 2 == 0)
+	int	inc;
+	int max_value;
+	int max_idx;
+
+	inc = 0;
+	max_idx = 0;
+	max_value = *stack;
+	while (inc < qty)
 	{
-		*set_median += *(stack + ((qty / 2) - 1));
-		*set_median /= 2;
+		if (max_value < *(stack + inc))
+		{
+			max_value = *(stack + inc);
+			max_idx = inc;
+		}
+		inc++;
 	}
+	return(max_idx); 
 }

@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_median.c                                     :+:      :+:    :+:   */
+/*   min_to_top_stacks.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/23 10:18:23 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/23 10:18:42 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/18 08:20:23 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/25 15:51:16 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	stack_median(int *stack, int qty, int *set_median)
+int	min_to_top_stacks(t_stacks *stack)
 {
-	*set_median = *(stack + (qty / 2));
-	if (qty % 2 == 0)
+	int	inc;
+	int inc_of_rotates;
+
+	inc = 0;
+	inc_of_rotates = 0;
+	while (inc < stack->cost.a && inc < stack->cost.b)
 	{
-		*set_median += *(stack + ((qty / 2) - 1));
-		*set_median /= 2;
+		if (stack->cost.reverse_b == 0 && stack->cost.reverse_a == 0)
+		{
+			rr(stack);
+			inc_of_rotates++;
+		}
+		else if (stack->cost.reverse_b == 1 && stack->cost.reverse_a == 1)
+		{
+			rrr(stack);
+			inc_of_rotates++;
+		}
+		inc++;
 	}
+	return (inc_of_rotates);
 }

@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cost_element.c                                     :+:      :+:    :+:   */
+/*   min_to_top_stack_b.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 18:10:27 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/11 18:17:05 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/11 18:12:13 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/25 15:37:29 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	cost_element(t_stacks *stack, int a, int b)
+void	min_to_top_stack_b(t_stacks *stack, int inc)
 {
-	if (*(stack->a.value + a) > *(stack->b.value + b))
+	while (inc < stack->cost.b)
 	{
-		if (stack->b.qty / 2 > b)
-			stack->cost.b = b;
-		else
-			stack->cost.b = stack->b.qty - b;
-		if (stack->a.qty / 2 > a)
-			stack->cost.a = a;
-		else
-			stack->cost.a = stack->a.qty - a;
-		return (1);
+		if (stack->cost.reverse_b == 0)
+			rb(stack);
+		else if (stack->cost.reverse_b == 1)
+			rrb(stack);
+		inc++;
 	}
-	return (0);
 }

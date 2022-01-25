@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_median.c                                     :+:      :+:    :+:   */
+/*   sort_low.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/23 10:18:23 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/23 10:18:42 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/09 02:31:35 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/19 10:19:50 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	stack_median(int *stack, int qty, int *set_median)
+void	sort_low(t_stacks *stack)
 {
-	*set_median = *(stack + (qty / 2));
-	if (qty % 2 == 0)
+	while (is_sorted_low_to_high(stack->a.value, stack->a.qty) == 0)
 	{
-		*set_median += *(stack + ((qty / 2) - 1));
-		*set_median /= 2;
+		if (stack->a.qty == 2)
+			sa(stack);
+		else
+		{
+			if (is_reverse_rotate(stack->a.value) == 1)
+				rra(stack);
+			else if (is_rotate(stack->a.value) == 1)
+				ra(stack);
+			else
+				sa(stack);
+		}
 	}
 }

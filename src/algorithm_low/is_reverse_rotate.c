@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   advanced_operation_stack_b.c                       :+:      :+:    :+:   */
+/*   is_reverse_rotate.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 18:12:13 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/11 18:17:17 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/19 10:19:25 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/19 10:20:10 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	operation_stack_b(t_stacks *stack)
+int	is_reverse_rotate(int *stack)
 {
-	int	inc;
+	int first;
+	int	second;
+	int	third;
 
-	inc = 0;
-	while (inc < stack->cost.final_b)
-	{
-		if (stack->cost.final_b < stack->b.qty / 2)
-			rb(stack);
-		else if (stack->cost.final_b >= stack->b.qty / 2)
-			rrb(stack);
-		inc++;
-	}
+	first = *stack;
+	second = *(stack + 1);
+	third = *(stack + 2);
+	if (first < second && first > third && second > third)
+		return (1);
+	else
+		return (0);
 }

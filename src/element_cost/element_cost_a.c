@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_median.c                                     :+:      :+:    :+:   */
+/*   element_cost_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/23 10:18:23 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/23 10:18:42 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/11 18:10:27 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/25 15:11:46 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	stack_median(int *stack, int qty, int *set_median)
+int	element_cost_a(t_stacks *stack, int a, int b)
 {
-	*set_median = *(stack + (qty / 2));
-	if (qty % 2 == 0)
+	if (*(stack->a.value + a - 1) < *(stack->b.value + b) && *(stack->a.value + a) > *(stack->b.value + b))
 	{
-		*set_median += *(stack + ((qty / 2) - 1));
-		*set_median /= 2;
+		if (stack->a.qty / 2 > a)
+		{
+			stack->cost.temp_a = a;
+			stack->cost.temp_reverse_a = 0;
+		}
+		else
+		{
+			stack->cost.temp_a = stack->a.qty - a;
+			stack->cost.temp_reverse_a = 1;
+		}
+		return (1);
 	}
+	return (0);
 }

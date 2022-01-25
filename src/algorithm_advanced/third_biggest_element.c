@@ -1,32 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   advanced_operation_reverse_stack_a.c               :+:      :+:    :+:   */
+/*   third_biggest_element.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 18:13:36 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/11 18:15:26 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/24 19:46:43 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/24 19:46:50 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	reverse_operation_stack_a(t_stacks *stack)
+int	third_biggest_element(t_stacks *stack, int first, int second, int third)
 {
 	int	inc;
 
-	inc = 0;
-	while (inc < stack->cost.final_a)
+	inc = 3;
+	while (inc < stack->a.qty)
 	{
-		if (stack->cost.final_a < (stack->a.qty - 1) / 2)
-			rra(stack);
-		else if (stack->cost.final_a >= (stack->a.qty - 1) / 2)
+		if (third < *(stack->a.value + inc))
 		{
-			ra(stack);
-			if (stack->cost.final_a == 1)
-				ra(stack);
+			if (second < *(stack->a.value + inc))
+			{
+				if (first < *(stack->a.value + inc))
+				{
+					third = second;
+					second = first;
+					first = *(stack->a.value + inc);
+				}
+				else
+				{
+					third = second;
+					second = *(stack->a.value + inc);
+				}
+			}
+			else
+				third = *(stack->a.value + inc);
 		}
 		inc++;
 	}
+	return (third);
 }

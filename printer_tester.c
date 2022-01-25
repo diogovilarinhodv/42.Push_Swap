@@ -35,21 +35,6 @@ void	printer_tester(t_stacks *stack)
 	}
 	else
 		printf("Stack B: empty\n");
-	if (stack->sorted.value != NULL)
-	{
-		cnt = 0;
-		printf("Stack C:\n");
-		while (cnt < stack->a.qty + stack->b.qty)
-		{
-			if (cnt > 0)
-				printf(" - ");
-			printf("%d", *(stack->sorted.value + cnt));
-			cnt++;
-		}
-		printf("\n");
-	}	
-	else
-		printf("\nStack C: empty\n");
 	printf("\n");
 }
 
@@ -90,21 +75,6 @@ void	printer_tester_edges(t_stacks *stack)
 	}
 	else
 		printf("Stack B: empty\n");
-	if (stack->sorted.value != NULL)
-	{
-		cnt = 0;
-		printf("Stack C:\n");
-		while (cnt < stack->a.qty + stack->b.qty)
-		{
-			if (cnt > 0)
-				printf(" - ");
-			printf("%d", *(stack->sorted.value + cnt));
-			cnt++;
-		}
-		printf("\n");
-	}	
-	else
-		printf("\nStack C: empty\n");
 	printf("------------------------------------------");
 	printf("\n\n");
 }

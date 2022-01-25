@@ -1,3 +1,7 @@
+#################################################################################################
+# 										VARIABLES												#
+#################################################################################################
+
 # Compiler
 CC							=	gcc
 
@@ -24,81 +28,116 @@ LIB_FILE					=	push_swap.a
 HEADER_FILES				=	src/push_swap.h
 OBJ_FILES					=	${SRC_FILES:.c=.o}
 
+#################################################################################################
+# 										FILES													#
+#################################################################################################
+
 # Source files
-SRC_FILES					=	src/push_swap.c												\
-								$(SRC_ERROR_HANDLING_FILES)									\
-								$(SRC_LIBFT_FILES)											\
-								$(SRC_UTILS_FILES)											\
-								$(SRC_OPERATIONS_FILES)										\
-								$(SRC_OPERATIONS_UTILS_FILES)								\
-								$(SRC_ALGORITHM_FILES)										\
-								$(SRC_ALGORITHM_UTILS_FILES)								\
-								$(SRC_STACK_HANDLING_FILES)									\
-								printer_tester.c
+SRC_FILES						=	$(ALGORITHM)												\
+									$(ALGORITHM_ADVANCED)										\
+									$(ALGORITHM_LOW)											\
+									$(ELEMENT_COSTS)											\
+									$(ELEMENT_MOVES)											\
+									$(ELEMENT_POSITION)											\
+									$(ERROR_HANDLING)											\
+									$(OPERATIONS)												\
+									$(STACK_HANDLING)											\
+									$(STACK_VERIFY)												\
+									$(UTILS)													\
+									$(LIBFT)													\
+									$(EXECUTABLE_FILE)											\
+									printer_tester.c
+
+# Algorithm
+ALGORITHM						=	src/algorithm/sort.c										\
+									src/algorithm/sort_low.c									\
+									src/algorithm/sort_medium.c 								\
+									src/algorithm/sort_advanced.c
+
+# Algorithm Advanced
+ALGORITHM_ADVANCED				=	src/algorithm_advanced/send_to_stack_b.c					\
+									src/algorithm_advanced/sort_stack_b.c						\
+									src/algorithm_advanced/min_to_top_stack_a.c					\
+									src/algorithm_advanced/min_to_top_stack_b.c					\
+									src/algorithm_advanced/min_to_top_stacks.c					\
+									src/algorithm_advanced/send_b.c								\
+									src/algorithm_advanced/third_biggest_element.c
+
+# Algorithm Low
+ALGORITHM_LOW					=	src/algorithm_low/is_rotate.c								\
+									src/algorithm_low/is_reverse_rotate.c
+
+# Element costs
+ELEMENT_COSTS					=	src/element_cost/element_cost_a.c							\
+									src/element_cost/element_cost_b.c							\
+									src/element_cost/element_cost_pos_first.c					\
+									src/element_cost/element_cost_pos_min.c						\
+									src/element_cost/element_cost_pos_max.c						\
+									src/element_cost/element_lowest_cost.c						\
+									src/element_cost/element_set_costs.c
+
+# Element moves
+ELEMENT_MOVES					=	src/element_moves/element_swap.c							\
+									src/element_moves/element_add.c								\
+									src/element_moves/element_remove.c							\
+									src/element_moves/element_climb.c							\
+									src/element_moves/element_fall.c
+
+# Element position
+ELEMENT_POSITION				=	src/element_position/element_pos_max.c						\
+									src/element_position/element_pos_min.c
 
 # Error handler
-SRC_ERROR_HANDLING_FILES	=	src/errors/error_args.c										\
-								src/errors/error_malloc.c
+ERROR_HANDLING					=	src/errors/error_args.c										\
+									src/errors/error_malloc.c
 
-# Utils files
-SRC_UTILS_FILES				=	src/utils/inicialize.c										\
-								src/utils/check_input.c										\
-								src/utils/program_over.c
+# Operation				
+OPERATIONS						=	src/operations/sa.c 										\
+									src/operations/sb.c 										\
+									src/operations/ss.c 										\
+									src/operations/pa.c 										\
+									src/operations/pb.c 										\
+									src/operations/ra.c 										\
+									src/operations/rb.c 										\
+									src/operations/rr.c 										\
+									src/operations/rra.c										\
+									src/operations/rrb.c 										\
+									src/operations/rrr.c
 
-# Stack handler files
-SRC_STACK_HANDLING_FILES	=	src/stack_handler/stack_alloc.c								\
-								src/stack_handler/stack_fill.c								\
-								src/stack_handler/stack_refill.c 							\
-								src/stack_handler/stack_sort.c 								\
-								src/stack_handler/stack_median.c
+# Stack handler
+STACK_HANDLING					=	src/stack_handler/stack_alloc.c								\
+									src/stack_handler/stack_fill.c								\
+									src/stack_handler/stack_refill.c 							\
+									src/stack_handler/stack_sort.c								\
+									src/stack_handler/stack_median.c
 
-# Operation files				
-SRC_OPERATIONS_FILES		=	src/operations/sa.c 										\
-								src/operations/sb.c 										\
-								src/operations/ss.c 										\
-								src/operations/pa.c 										\
-								src/operations/pb.c 										\
-								src/operations/ra.c 										\
-								src/operations/rb.c 										\
-								src/operations/rr.c 										\
-								src/operations/rra.c										\
-								src/operations/rrb.c 										\
-								src/operations/rrr.c
+# Stack verify
+STACK_VERIFY					=	src/stack_verify/is_sorted_low_to_high.c					\
+									src/stack_verify/is_sorted_high_to_low.c
 
-# Operation utils files
-SRC_OPERATIONS_UTILS_FILES	=	src/element_handler/element_swap.c							\
-								src/element_handler/element_add.c							\
-								src/element_handler/element_remove.c						\
-								src/element_handler/element_climb.c							\
-								src/element_handler/element_fall.c
+# Utils
+UTILS							=	src/utils/inicialize.c										\
+									src/utils/check_input.c										\
+									src/utils/program_over.c
 
-# Algorithm files
-SRC_ALGORITHM_FILES			=	src/algorithm/sort.c										\
-								src/algorithm/sort_low_a.c									\
-								src/algorithm/sort_low_b.c									\
-								src/algorithm/sort_medium.c 								\
-								src/algorithm/sort_advanced.c
+# LIBFT
+LIBFT							=	libft/ft_atoi.c												\
+									libft/ft_strlen.c											\
+									libft/ft_strncmp.c
 
-# Algorithm utils files
-SRC_ALGORITHM_UTILS_FILES	=	src/algorithm_utils/is_sorted_low_to_high.c					\
-								src/algorithm_utils/is_sorted_high_to_low.c					\
-								src/algorithm_utils/advanced_operation_reverse_stack_a.c	\
-								src/algorithm_utils/advanced_operation_stack_b.c			\
-								src/algorithm_utils/advanced_operation_stack_a.c			\
-								src/algorithm_utils/cost_element.c							\
-								src/algorithm_utils/cost_last_element.c						\
-								src/algorithm_utils/cost_set.c								\
-								src/algorithm_utils/element_pos_max.c
-
-
-# LIBFT files
-SRC_LIBFT_FILES				=	libft/ft_atoi.c												\
-								libft/ft_strlen.c											\
-								libft/ft_strncmp.c	
-
+#################################################################################################
+# 										EXECUTABLE												#
+#################################################################################################
 
 # Name of executable file
-EXECUTABLE_NAME 			=	push_swap
+EXECUTABLE_NAME 				=	push_swap
+
+# EXECUTABLE FILE
+EXECUTABLE_FILE 				=	src/$(EXECUTABLE_NAME).c	
+
+#################################################################################################
+# 										RULES													#
+#################################################################################################
 
 # Convert C Files to Object Files
 .c.o:
