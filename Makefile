@@ -41,10 +41,8 @@ SRC_FILES						=	$(ALGORITHM)												\
 									$(ELEMENT_COSTS)											\
 									$(ELEMENT_MOVES)											\
 									$(ELEMENT_POSITION)											\
-									$(ERROR_HANDLING)											\
 									$(OPERATIONS)												\
 									$(STACK_HANDLING)											\
-									$(STACK_VERIFY)												\
 									$(UTILS)													\
 									$(LIBFT)													\
 									$(EXECUTABLE_FILE)
@@ -59,7 +57,9 @@ ALGORITHM						=	src/algorithm/sort.c										\
 ALGORITHM_ADVANCED				=	src/algorithm_advanced/min_to_top_stack_a.c					\
 									src/algorithm_advanced/min_to_top_stack_b.c					\
 									src/algorithm_advanced/min_to_top_stacks.c					\
+									src/algorithm_advanced/send_a.c								\
 									src/algorithm_advanced/send_b.c								\
+									src/algorithm_advanced/sort_stack_a.c						\
 									src/algorithm_advanced/sort_stack_b.c						\
 									src/algorithm_advanced/third_biggest_element.c
 
@@ -87,10 +87,6 @@ ELEMENT_MOVES					=	src/element_moves/element_swap.c							\
 ELEMENT_POSITION				=	src/element_position/element_pos_max.c						\
 									src/element_position/element_pos_min.c
 
-# Error handler
-ERROR_HANDLING					=	src/errors/error_args.c										\
-									src/errors/error_malloc.c
-
 # Operation				
 OPERATIONS						=	src/operations/sa.c 										\
 									src/operations/sb.c 										\
@@ -109,11 +105,8 @@ STACK_HANDLING					=	src/stack_handler/stack_alloc.c								\
 									src/stack_handler/stack_fill.c								\
 									src/stack_handler/stack_refill.c 							\
 									src/stack_handler/stack_sort.c								\
-									src/stack_handler/stack_median.c
-
-# Stack verify
-STACK_VERIFY					=	src/stack_verify/is_sorted_low_to_high.c					\
-									src/stack_verify/is_sorted_high_to_low.c
+									src/stack_handler/stack_median.c							\
+									src/stack_handler/stack_is_sorted.c
 
 # Utils
 UTILS							=	src/utils/inicialize.c										\

@@ -6,34 +6,11 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 17:00:57 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 21:22:57 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/26 10:55:19 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-/*
-
-	Function: 
-	
-		check_input
-
-	Parameters:
-
-		"int argc"				-	Quantity of input arguments.
-		"char **argv"			-	Array bidimensional that contains the input arguments.
-
-	Return:
-
-		nothing.
-
-	Info:
-
-		"if (argc < 2) error_args()"		-	Checks if args are wrong, if they are, "error_args()" handle it.
-		""									-	Check if is a number.
-		""									-	Check if are duplicated numbers.
-
-*/
 
 static int	is_number(char *str)
 {
@@ -93,7 +70,7 @@ void	check_input(int argc, char **argv)
 
 	inc = 1;
 	if (argc < 2)
-		error_args();
+		program_over(NULL, 1);
 	while (inc < argc)
 	{
 		if (is_number(*(argv + inc)) == 0)

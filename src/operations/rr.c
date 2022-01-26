@@ -6,37 +6,11 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:22:30 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 22:26:06 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/26 11:16:53 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-/*
-
-	Function: 
-	
-		rr
-
-	Parameters:
-
-		"t_stack *stack"		-	Struct stack that contains all data about the stacks.
-
-	Return:
-
-		"int 0"	-	If function executes.
-		"int 1"	-	If function doesnt executes.
-
-	Info:
-
-		"stack->output = 0"			-	Set 0 to variable "output" of stack.
-		"ra(stack)"					-	Executes ra operation.
-		"rb(stack)"					-	Executes rb operation.
-		"stack->output = 1"			-	Set 1 to variable "output" of stack.
-		"write(1, "rr\n", 4)"		-	Shows "rr".
-		"printer_tester(stack)"		-	Test Funtion.
-		
-*/
 
 int	rr(t_stacks *stack)
 {

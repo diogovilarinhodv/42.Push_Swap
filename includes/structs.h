@@ -6,20 +6,12 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 15:12:28 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 22:39:17 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/26 10:49:53 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCTS_H
 # define STRUCTS_H
-
-/*
-	struct: s_stack
-
-	"int	*value"		-	Value of stack.
-	"int	qty"		-	Quantity of stack.
-	"int	median"		-	Median of stack values.
-*/
 
 typedef struct s_stack
 {
@@ -39,16 +31,6 @@ typedef struct s_cost
 	int	reverse_b;
 	int	total;
 }	t_cost;
-
-/*
-	struct: s_stack
-
-	"t_stack	stack_a"		-	Stack A.
-	"t_stack	stack_b"		-	Stack B.
-	"t_stack	stack_sorted"	-	Stack Sorted.
-	"int		output"			-	If "0" = Doesnt shows the single operation executed, shows the group operation, in case of "rr", "rrr", "ss".
-									If "1" = Shows the single operation executed, in case of "pa", "pb", "ra", "rb", "rra", "rrb", "sa", "sb".
-*/
 
 typedef struct s_stacks
 {

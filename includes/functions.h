@@ -11,7 +11,9 @@ void	sort_advanced(t_stacks *stack);
 int		min_to_top_stacks(t_stacks *stack);
 void	min_to_top_stack_a(t_stacks *stack, int inc);
 void	min_to_top_stack_b(t_stacks *stack, int inc);
+void	send_a(t_stacks *stack);
 void	send_b(t_stacks *stack);
+void	sort_stack_a(t_stacks *stack);
 void	sort_stack_b(t_stacks *stack);
 int		third_biggest_element(t_stacks *stack, int f, int s, int t);
 
@@ -39,10 +41,6 @@ void	element_swap(int *n1, int *n2);
 int		element_pos_max(int	*stack, int qty);
 int		element_pos_min(int	*stack, int qty);
 
-// Errors handling
-void	error_args(void);
-void	error_alloc_mem(t_stacks *stack);
-
 // Operations
 int		sa(t_stacks *stack);
 int		sb(t_stacks *stack);
@@ -62,10 +60,7 @@ void	stack_fill(int **stack, int *qty, char **argv, int argc);
 void	stack_refill(int *new_stack, int *old_stack, int qty);
 void	stack_median(int *stack, int qty, int *set_median);
 void	stack_sort(int *stack, int qty);
-
-// Stack verify
-int		is_sorted_low_to_high(int *stack, int qty);
-int		is_sorted_high_to_low(int *stack, int qty);
+int		stack_is_sorted(int *stack, int qty);
 
 // Utils
 void	inicialize(t_stacks *stack, int argc, char **argv);

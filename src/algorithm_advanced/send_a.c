@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_sorted_high_to_low.c                            :+:      :+:    :+:   */
+/*   send_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 01:55:49 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/25 21:23:39 by dpestana         ###   ########.fr       */
+/*   Created: 2022/01/26 11:23:04 by dpestana          #+#    #+#             */
+/*   Updated: 2022/01/26 11:32:28 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	is_sorted_high_to_low(int *stack, int qty)
+void	send_a(t_stacks *stack)
 {
 	int	inc;
 
-	inc = 1;
-	while (inc < qty)
+	while (stack->b.qty > 0)
 	{
-		if (*(stack + inc - 1) > *(stack + inc))
-			inc++;
-		else
-			break ;
+		element_lowest_cost(stack);
+		inc = min_to_top_stacks(stack);
+		min_to_top_stack_b(stack, inc);
+		min_to_top_stack_a(stack, inc);
+		pa(stack);
 	}
-	if (inc == qty)
-		return (1);
-	return (0);
 }

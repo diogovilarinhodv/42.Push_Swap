@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 02:31:35 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/19 10:19:50 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/26 11:15:00 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sort_low(t_stacks *stack)
 {
-	while (is_sorted_low_to_high(stack->a.value, stack->a.qty) == 0)
+	while (stack_is_sorted(stack->a.value, stack->a.qty) == 0)
 	{
 		if (stack->a.qty == 2)
 			sa(stack);
