@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 17:00:57 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/26 10:55:19 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:52:09 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	check_input(int argc, char **argv)
 
 	inc = 1;
 	if (argc < 2)
-		program_over(NULL, 1);
+		program_over(NULL, 0);
 	while (inc < argc)
 	{
 		if (is_number(*(argv + inc)) == 0)

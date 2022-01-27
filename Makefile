@@ -25,13 +25,16 @@ LIB_FOLDER					=	lib
 
 # Files
 LIB_FILE					=	push_swap.a
+CHECKER_LIB_FILE			=	checker.a
 HEADER_FILES				=	includes/push_swap.h											\
 								includes/functions.h											\
-								includes/structs.h
+								includes/structs.h												\
+								checker.h
 OBJ_FILES					=	${SRC_FILES:.c=.o}
+CHECKER_OBJ_FILES			=	${CHECKER_FILES:.c=.o}
 
 #################################################################################################
-# 										FILES													#
+# 										SRC_FILES												#
 #################################################################################################
 
 # Source files
@@ -119,6 +122,23 @@ LIBFT							=	libft/ft_atoi.c												\
 									libft/ft_strncmp.c
 
 #################################################################################################
+# 										CHECKER_FILES											#
+#################################################################################################
+
+# Source files
+CHECKER_FILES					=	$(ELEMENT_MOVES)											\
+									$(OPERATIONS)												\
+									$(STACK_HANDLING)											\
+									$(UTILS)													\
+									$(LIBFT)													\
+									$(GET_NEXT_LINE)											\
+									$(CHECKER_EXECUTABLE_FILE)
+
+# GET_NEXT_LINE
+GET_NEXT_LINE					=	get_next_line/get_next_line.c								\
+									get_next_line/get_next_line_utils.c
+
+#################################################################################################
 # 										EXECUTABLE												#
 #################################################################################################
 
@@ -127,6 +147,12 @@ EXECUTABLE_NAME 				=	push_swap
 
 # EXECUTABLE FILE
 EXECUTABLE_FILE 				=	src/$(EXECUTABLE_NAME).c	
+
+# Name of executable file
+CHECKER_EXECUTABLE_NAME			=	checker
+
+# EXECUTABLE FILE
+CHECKER_EXECUTABLE_FILE			=	src/checker/$(CHECKER_EXECUTABLE_NAME).c
 
 #################################################################################################
 # 										RULES													#
@@ -140,10 +166,12 @@ EXECUTABLE_FILE 				=	src/$(EXECUTABLE_NAME).c
 all:				$(EXECUTABLE_NAME)  
 
 # Build Project
-$(EXECUTABLE_NAME): ${OBJ_FILES}
+$(EXECUTABLE_NAME): ${OBJ_FILES} ${CHECKER_OBJ_FILES}
 					$(CREATE_FOLDER) $(LIB_FOLDER)
 					${AR} ${LIB_FOLDER}/${LIB_FILE} ${OBJ_FILES}
-					${CC} ${C_FLAGS} ${LIB_FOLDER}/${LIB_FILE} $(NAME_FLAG) $(EXECUTABLE_NAME) 
+					${AR} ${LIB_FOLDER}/${CHECKER_LIB_FILE} ${CHECKER_OBJ_FILES}
+					${CC} ${C_FLAGS} ${LIB_FOLDER}/${LIB_FILE} $(NAME_FLAG) $(EXECUTABLE_NAME)
+					${CC} ${C_FLAGS} ${LIB_FOLDER}/${CHECKER_LIB_FILE} $(NAME_FLAG) $(CHECKER_EXECUTABLE_NAME) 
 
 # Norminette
 norm:

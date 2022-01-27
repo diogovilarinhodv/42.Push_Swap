@@ -1,6 +1,8 @@
 push_swap.dSYM
 push_swap
+/checker
 .vscode
 checker_linux
 checker_mac
 printer_tester.c
+*.o

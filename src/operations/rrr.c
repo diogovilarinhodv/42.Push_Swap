@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:48:57 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/26 11:17:05 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/01/26 19:41:57 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 int	rrr(t_stacks *stack)
 {
-	stack->output = 0;
+	if (stack->output != 2)
+		stack->output = 0;
 	rra(stack);
 	rrb(stack);
-	stack->output = 1;
-	write(1, "rrr\n", 4);
+	if (stack->output != 2)
+		stack->output = 1;
+	if (stack->output == 1)
+		write(1, "rrr\n", 4);
 	return (0);
 }
