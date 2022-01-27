@@ -163,7 +163,7 @@ CHECKER_EXECUTABLE_FILE			=	src/checker/$(CHECKER_EXECUTABLE_NAME).c
 					${CC} ${C_FLAGS} $(OBJ_FLAG) $< $(NAME_FLAG) ${<:.c=.o}
 
 # all
-all:				$(EXECUTABLE_NAME)  
+all:				$(EXECUTABLE_NAME) $(CHECKER_EXECUTABLE_NAME)
 
 # Build Project
 $(EXECUTABLE_NAME): ${OBJ_FILES} ${CHECKER_OBJ_FILES}
@@ -175,15 +175,18 @@ $(EXECUTABLE_NAME): ${OBJ_FILES} ${CHECKER_OBJ_FILES}
 
 # Norminette
 norm:
-					$(NORM) $(HEADER_FILES) $(SRC_FILES)
+					$(NORM) $(HEADER_FILES) $(SRC_FILES) $(CHECKER_FILES)
 
 # Clean Project
 clean:
 					${RM} ${OBJ_FILES}
+					${RM} ${CHECKER_OBJ_FILES}
 					${RM} $(EXECUTABLE_NAME)
+					${RM} $(CHECKER_EXECUTABLE_NAME)
 
 fclean:				clean
 					${RM} ${LIB_FOLDER}/${LIB_FILE}
+					${RM} ${LIB_FOLDER}/${CHECKER_LIB_FILE}
 					${RM} $(LIB_FOLDER)
 
 # Clean and Build Project
