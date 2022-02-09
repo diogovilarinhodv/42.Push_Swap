@@ -29,7 +29,7 @@ CHECKER_LIB_FILE			=	checker.a
 HEADER_FILES				=	includes/push_swap.h											\
 								includes/functions.h											\
 								includes/structs.h												\
-								checker.h
+								src/checker/checker.h
 OBJ_FILES					=	${SRC_FILES:.c=.o}
 CHECKER_OBJ_FILES			=	${CHECKER_FILES:.c=.o}
 

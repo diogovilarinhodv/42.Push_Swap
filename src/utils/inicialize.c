@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   inicialize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: dpestana <dpestana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:21:22 by dpestana          #+#    #+#             */
-/*   Updated: 2022/01/26 10:51:59 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/02/09 20:24:47 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ void	inicialize(t_stacks *stack, int argc, char **argv)
 	stack_alloc(stack, &(stack->sorted_a.value), stack->a.qty);
 	stack_refill(stack->sorted_a.value, stack->a.value, stack->a.qty);
 	stack_sort(stack->sorted_a.value, stack->a.qty);
-	stack_median(stack->sorted_a.value, stack->a.qty, &(stack->absolute_median));
+	stack_median(stack->sorted_a.value, stack->a.qty,
+		&(stack->absolute_median));
 }
