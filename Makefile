@@ -40,6 +40,7 @@ CHECKER_OBJ_FILES			=	${CHECKER_FILES:.c=.o}
 # Source files
 SRC_FILES						=	$(ALGORITHM)												\
 									$(ALGORITHM_ADVANCED)										\
+									$(ALGORITHM_MEDIUM)											\
 									$(ALGORITHM_LOW)											\
 									$(ELEMENT_COSTS)											\
 									$(ELEMENT_MOVES)											\
@@ -65,6 +66,11 @@ ALGORITHM_ADVANCED				=	src/algorithm_advanced/min_to_top_stack_a.c					\
 									src/algorithm_advanced/sort_stack_a.c						\
 									src/algorithm_advanced/sort_stack_b.c						\
 									src/algorithm_advanced/third_biggest_element.c
+
+# Algorithm Medium
+ALGORITHM_MEDIUM				=	src/algorithm_medium/send_to_b_medium.c						\
+									src/algorithm_medium/sort_low_b.c							\
+									src/algorithm_medium/stack_is_sorted_reverse.c
 
 # Algorithm Low
 ALGORITHM_LOW					=	src/algorithm_low/is_rotate.c								\

@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 20:29:23 by dpestana          #+#    #+#             */
-/*   Updated: 2022/02/09 20:29:24 by dpestana         ###   ########.fr       */
+/*   Updated: 2022/02/10 14:51:57 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,12 @@ void	sort_stack_a(t_stacks *stack);
 void	sort_stack_b(t_stacks *stack);
 int		third_biggest_element(t_stacks *stack, int f, int s, int t);
 
+// Medium algorithm
+void	send_b_medium(t_stacks *stack);
+void	sort_low_b(t_stacks *stack);
+
 // Low algorithm
+int		stack_is_sorted_reverse(int *stack, int qty);
 int		is_reverse_rotate(int *stack);
 int		is_rotate(int *stack);
 
